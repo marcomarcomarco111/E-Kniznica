@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive Online Boot Store Website Design Tutorial</title>
+    <title>E-kniznica Bookly</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -18,40 +18,10 @@
 <body>
     
 <!-- header section starts  -->
-
-<header class="header">
-
-    <div class="header-1">
-
-        <a href="#" class="logo"> <i class="fas fa-book"></i> bookly </a>
-
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-
-        <div class="icons">
-            <div id="search-btn" class="fas fa-search"></div>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <div id="login-btn" class="fas fa-user"></div>
-        </div>
-
-    </div>
-
-    <div class="header-2">
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#featured">featured</a>
-            <a href="#arrivals">arrivals</a>
-            <a href="#reviews">reviews</a>
-            <a href="#blogs">blogs</a>
-        </nav>
-    </div>
-
-</header>
-
+<?php require_once 'header.html'; ?>
 <!-- header section ends -->
+
+
 
 <!-- bottom navbar  -->
 
@@ -64,27 +34,8 @@
 </nav>
 
 <!-- login form  -->
+<?php require_once 'login.html'; ?>
 
-<div class="login-form-container">
-
-    <div id="close-login-btn" class="fas fa-times"></div>
-
-    <form action="">
-        <h3>sign in</h3>
-        <span>username</span>
-        <input type="email" name="" class="box" placeholder="enter your email" id="">
-        <span>password</span>
-        <input type="password" name="" class="box" placeholder="enter your password" id="">
-        <div class="checkbox">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me"> remember me</label>
-        </div>
-        <input type="submit" value="sign in" class="btn">
-        <p>forget password ? <a href="#">click here</a></p>
-        <p>don't have an account ? <a href="#">create one</a></p>
-    </form>
-
-</div>
 
 <!-- home section starts  -->
 
@@ -114,13 +65,13 @@
 
 </section>
 
-<!-- home section ense  -->
+<!-- home section ends  -->
 
 <!-- icons section starts  -->
 
 <section class="icons-container">
 
-    <div class="icons">
+    <div class="icons" >
         <i class="fas fa-shipping-fast"></i>
         <div class="content">
             <h3>free shipping</h3>
@@ -735,61 +686,7 @@
 <!-- blogs section ends -->
 
 <!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>our locations</h3>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> indonesia </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> russia </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> france </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
-            <a href="#"> <i class="fas fa-map-marker-alt"></i> africa </a>
-        </div>
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
-        </div>
-
-        <div class="box">
-            <h3>extra links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> account info </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> ordered items </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> privacy policy </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> payment method </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> our serivces </a>
-        </div>
-
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-            <a href="#"> <i class="fas fa-envelope"></i> hellofreewebsitecode@gmail.com </a>
-            <img src="image/worldmap.png" class="map" alt="">
-        </div>
-        
-    </div>
-
-    <div class="share">
-        <a href="https://facebook.com/freewebsitecode/" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
-    </div>
-
-    <div class="credit"> created by <span><a href="https://freewebsitecode.com/">Free Website Code</a></span> | all rights reserved! </div>
-
-</section>
-
+<?php require_once 'footer.html'; ?>
 <!-- footer section ends -->
 
 <!-- loader  -->
