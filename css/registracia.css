@@ -1,0 +1,48 @@
+.form-wrapper {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    background:var(--green);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #94d592;
+}
+
+#prihlasenie_text{
+    font-size: 13px;
+    font-weight: bold;
+
+}
