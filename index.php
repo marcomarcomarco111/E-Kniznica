@@ -1,15 +1,16 @@
+<?php
+require_once 'config.php';
+require_once __DIR__ . '/parts/header.php';
+require_once __DIR__ . '/parts/login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <body>
-    
+
 <!-- header section starts  -->
-<?php require_once 'parts/header.html'; ?>
+
 <!-- header section ends -->
-
-
-
-<!-- bottom navbar  -->
 
 <nav class="bottom-navbar">
     <a href="#home" class="fas fa-home"></a>
@@ -18,9 +19,6 @@
     <a href="#reviews" class="fas fa-comments"></a>
     <a href="#blogs" class="fas fa-blog"></a>
 </nav>
-
-<!-- login form  -->
-<?php require_once 'parts/login.html'; ?>
 
 
 <!-- home section starts  -->
@@ -669,12 +667,10 @@
 
 </section>
 
-<!-- blogs section ends -->
 
 <!-- footer section starts  -->
 <?php require_once 'parts/footer.html'; ?>
 <!-- footer section ends -->
 
-<!-- loader  -->
 </body>
 </html>

@@ -1,12 +1,17 @@
+<?php
+require_once 'config.php';
+require_once __DIR__ . '/parts/header.php';
+require_once __DIR__ . '/parts/login.php';
+?>
 <!DOCTYPE html>
 <html lang="sk">
-<?php require_once 'parts/header.html'; ?>
+
 <head><link rel="stylesheet" href="css/registracia.css"></head>
 <body>
 
 <div class="form-wrapper">
   <h2>Vytvoriť účet</h2>
-  <form action="db/registracne_udaje.php" method="POST" class="register-form">
+  <form action="registracialogin/registracne_udaje.php" method="POST" class="register-form">
 
     <div class="form-group">
       <label for="fname" id="prihlasenie_text">Meno</label>
@@ -36,6 +41,6 @@
     <button type="submit" class="form-button">Registrovať sa</button>
   </form>
 </div>
-
+<script src="js/script.js"></script>
 </body>
 </html>

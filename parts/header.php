@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -10,10 +12,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- custom css file link  -->
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -32,9 +32,21 @@
 
     <div class="icons">
       <div id="search-btn" class="fas fa-search"></div>
+
       <a href="#" class="fas fa-heart"></a>
       <a href="#" class="fas fa-shopping-cart"></a>
-      <div id="login-btn" class="fas fa-user"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+
+        <?php if (isset($_SESSION['meno'])): ?>
+            <span style="font-size: 2em; font-weight: bold;">
+      Vitaj,  <?= htmlspecialchars($_SESSION['meno']) ?>!
+    </span>
+            <a href="registracialogin/logout.php" style="font-size: 0.9em; margin-left: 10px;">
+                <i class="fas fa-sign-out-alt"></i> Odhlásiť sa
+            </a>
+
+        <?php endif; ?>
+
     </div>
 
   </div>
