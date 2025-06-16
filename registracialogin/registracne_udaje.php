@@ -1,37 +1,29 @@
 <?php
-require_once __DIR__ . '/../classes/Database.php';
+session_start();
+require_once __DIR__ . '/../classes/User.php';
 
-$meno = $_POST['meno'] ?? '';
-$priezvisko = $_POST['priezvisko'] ?? '';
-$email = $_POST['email'] ?? '';
-$mobil = $_POST['mobil'] ?? '';
-$heslo = $_POST['heslo'] ?? '';
+$user = new User();
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Zlý e-mail:");
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $meno = $_POST["meno"] ?? '';
+    $priezvisko = $_POST["priezvisko"] ?? '';
+    $email = $_POST["email"] ?? '';
+    $mobil = $_POST["mobil"] ?? '';
+    $heslo = $_POST["heslo"] ?? '';
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Zlý e-mail.");
+    }
+
+    $vysledok = $user->register($meno, $priezvisko, $email, $mobil, $heslo);
+
+    if ($vysledok === true) {
+        header("Location: ../index.php");
+        exit;
+    } else {
+        echo "Chyba: " . $vysledok;
+    }
+} else {
+    die("Neplatný prístup.");
 }
 
-//$hashovane_heslo = password_hash($heslo, PASSWORD_DEFAULT); tuto je moznost zahashovania hesla v pripade potreby
-
-$db = new Database();
-$conn = $db->connect();
-
-try {
-    $sql = "INSERT INTO pouzivatelia (Meno, Priezvisko, email, mobil, Heslo)
-            VALUES (:meno, :priezvisko, :email, :mobil, :heslo)";
-    $stmt = $conn->prepare($sql);
-
-    $stmt->bindParam(':meno', $meno);
-    $stmt->bindParam(':priezvisko', $priezvisko);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':mobil', $mobil);
-    $stmt->bindParam(':heslo', $heslo);
-
-    $stmt->execute();
-
-    header("Location: ../index.php");
-    exit;
-} catch (PDOException $e) {
-    echo "Chyba pri registrácii: " . $e->getMessage();
-}
-?>

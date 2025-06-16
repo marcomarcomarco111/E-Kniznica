@@ -1,16 +1,15 @@
 <?php
 session_start();
 require_once '../config.php';
-
-
+require_once '../classes/Admin.php';
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
     header("Location: ../index.php");
     exit;
 }
 
-$sql = "SELECT * FROM knihy";
-$result = $conn->query($sql);
+$admin = new Admin($conn);
+$knihy = $admin->getAllBooks();
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +17,14 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Admin | Správa kníh</title>
-
     <link rel="stylesheet" href="../css/admin.css">
-
 </head>
 <body>
+
 <a href="../registracialogin/logout.php" style="font-size: 0.9em; margin-left: 650px;">
     <i class="fas fa-sign-out-alt"></i> Odhlásiť sa
 </a>
+
 <div class="admin-container">
     <h1>Správa kníh</h1>
 
@@ -42,7 +41,7 @@ $result = $conn->query($sql);
         </tr>
         </thead>
         <tbody>
-        <?php while ($kniha = $result->fetch_assoc()): ?>
+        <?php foreach ($knihy as $kniha): ?>
             <tr>
                 <td><?= $kniha['idknihy'] ?></td>
                 <td><?= htmlspecialchars($kniha['nazov']) ?></td>
@@ -55,10 +54,10 @@ $result = $conn->query($sql);
                     <a href="delete.php?id=<?= $kniha['idknihy'] ?>" class="delete" onclick="return confirm('Naozaj chceš vymazať knihu?');">Zmazať</a>
                 </td>
             </tr>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         </tbody>
-
     </table>
+
     <div style="text-align: center; margin-top: 2rem;">
         <a href="add.php" class="add-book-button">+ Pridať novú knihu</a>
     </div>

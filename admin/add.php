@@ -1,13 +1,16 @@
 <?php
 session_start();
 require_once '../config.php';
+require_once '../classes/Admin.php';
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
     header("Location: ../index.php");
     exit;
 }
 
+$admin = new Admin($conn);
 $errors = [];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nazov = trim($_POST['nazov']);
     $autor = trim($_POST['autor']);
@@ -17,20 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $popis = trim($_POST['popis']);
     $obrazok = trim($_POST['obrazok']);
 
-    if (empty($nazov)) $errors[] = "Názov je povinný.";
-    if (empty($autor)) $errors[] = "Autor je povinný.";
+    $admin = new Admin($conn);
+    $result = $admin->addBook($nazov, $autor, $jazyk, $strany, $cena, $popis, $obrazok);
 
-
-    if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO knihy (nazov, autor, jazyk, strany, cena, popis, obrazok) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssidsi", $nazov, $autor, $jazyk, $strany, $cena, $popis, $obrazok);
-
-        if ($stmt->execute()) {
-            header("Location: admin.php");
-            exit;
-        } else {
-            $errors[] = "Chyba pri uložení knihy do databázy.";
-        }
+    if ($result) {
+        header("Location: adminmenu.php");
+        exit;
+    } else {
+        $errors[] = "Chyba pri uložení knihy do databázy.";
     }
 }
 ?>
@@ -40,57 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Pridať knihu | Admin</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        .form-container {
-            max-width: 600px;
-            margin: 3rem auto;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        label {
-            display: block;
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-        input[type="text"],
-        input[type="number"],
-        textarea {
-            width: 100%;
-            padding: 0.6rem;
-            margin-top: 0.5rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-        textarea {
-            resize: vertical;
-            height: 120px;
-        }
-        .btn-submit {
-            margin-top: 2rem;
-            background-color: #28a745;
-            color: white;
-            padding: 0.8rem 1.6rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-        .btn-submit:hover {
-            background-color: #218838;
-        }
-        .errors {
-            background: #f8d7da;
-            color: #842029;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/admin.css">
+
 </head>
 <body>
 
@@ -126,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="popis">Popis</label>
         <textarea id="popis" name="popis"></textarea>
 
-        <label for="obrazok">URL obrázka (relatívna alebo absolútna cesta)</label>
+        <label for="obrazok">URL obrázka</label>
         <input type="text" id="obrazok" name="obrazok" placeholder="napr. images/kniha.jpg">
 
         <button type="submit" class="btn-submit">Pridať knihu</button>
