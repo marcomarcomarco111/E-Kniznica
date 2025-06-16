@@ -7,13 +7,8 @@ require_once __DIR__ . '/parts/login.php';
 <html lang="en">
 
 <body>
-
-<!-- header section starts  -->
-
-<!-- header section ends -->
-
 <nav class="bottom-navbar">
-    <a href="#home" class="fas fa-home"></a>
+    <a href="index.php" class="fas fa-home"></a>
     <a href="#featured" class="fas fa-list"></a>
     <a href="#arrivals" class="fas fa-tags"></a>
     <a href="#reviews" class="fas fa-comments"></a>
@@ -35,12 +30,12 @@ require_once __DIR__ . '/parts/login.php';
 
         <div class="swiper books-slider">
             <div class="swiper-wrapper">
-                <a href="#" class="swiper-slide"><img src="image/book-1.jpg" alt=""style="height: 22rem; "></a>
-                <a href="#" class="swiper-slide"><img src="image/book-2.jpg" alt=""style="height: 22rem; "></a>
-                <a href="#" class="swiper-slide"><img src="image/book-3.jpg" alt=""style="height: 22rem;"></a>
-                <a href="#" class="swiper-slide"><img src="image/book-4.jpg" alt=""style="height: 22rem;"></a>
-                <a href="#" class="swiper-slide"><img src="image/book-5.jpg" alt=""style="height: 22rem;"></a>
-                <a href="#" class="swiper-slide"><img src="image/book-6.jpg" alt=""style="height: 22rem;"></a>
+                <a href="book.php?id=1" class="swiper-slide"><img src="image/book-1.jpg" alt=""style="height: 22rem; "></a>
+                <a href="book.php?id=2" class="swiper-slide"><img src="image/book-2.jpg" alt=""style="height: 22rem; "></a>
+                <a href="book.php?id=3" class="swiper-slide"><img src="image/book-3.jpg" alt=""style="height: 22rem;"></a>
+                <a href="book.php?id=4" class="swiper-slide"><img src="image/book-4.jpg" alt=""style="height: 22rem;"></a>
+                <a href="book.php?id=5" class="swiper-slide"><img src="image/book-5.jpg" alt=""style="height: 22rem;"></a>
+                <a href="book.php?id=6" class="swiper-slide"><img src="image/book-6.jpg" alt=""style="height: 22rem;"></a>
             </div>
             <img src="image/stand.png" class="stand" alt="">
         </div>
@@ -105,7 +100,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=1" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-1.jpg" alt="">
@@ -121,7 +116,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=2" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-2.jpg" alt="">
@@ -137,7 +132,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=3" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-3.jpg" alt="">
@@ -153,7 +148,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=4" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-4.jpg" alt="">
@@ -169,7 +164,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=5" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-5.jpg" alt="">
@@ -185,7 +180,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=6" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-6.jpg" alt="">
@@ -201,7 +196,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=7" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-7.jpg" alt="">
@@ -217,7 +212,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=8" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-8.jpg" alt="">
@@ -233,7 +228,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=9" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-9.jpg" alt="">
@@ -249,7 +244,7 @@ require_once __DIR__ . '/parts/login.php';
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
+                    <a href="book.php?id=10" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
                     <img src="image/book-10.jpg" alt="">
@@ -296,7 +291,7 @@ require_once __DIR__ . '/parts/login.php';
 
         <div class="swiper-wrapper">
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=1" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-1.jpg" alt="">
                 </div>
@@ -313,7 +308,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=2" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-2.jpg" alt="">
                 </div>
@@ -330,7 +325,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=3" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-3.jpg" alt="">
                 </div>
@@ -347,7 +342,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=4" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-4.jpg" alt="">
                 </div>
@@ -364,7 +359,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=5" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-5.jpg" alt="">
                 </div>
@@ -389,7 +384,7 @@ require_once __DIR__ . '/parts/login.php';
 
         <div class="swiper-wrapper">
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=6" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-6.jpg" alt="">
                 </div>
@@ -406,7 +401,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=7" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-7.jpg" alt="">
                 </div>
@@ -423,7 +418,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=8" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-8.jpg" alt="">
                 </div>
@@ -440,7 +435,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=9" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-9.jpg" alt="">
                 </div>
@@ -457,7 +452,7 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </a>
 
-            <a href="#" class="swiper-slide box">
+            <a href="book.php?id=10" class="swiper-slide box">
                 <div class="image">
                     <img src="image/book-10.jpg" alt="">
                 </div>
