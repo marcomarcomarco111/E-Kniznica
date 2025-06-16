@@ -28,19 +28,19 @@ require_once __DIR__ . '/parts/login.php';
     <div class="row">
 
         <div class="content">
-            <h3>upto 75% off</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias sit necessitatibus, aliquid ex minima at!</p>
-            <a href="https://freewebsitecode.com/" class="btn">shop now</a>
+            <h3>Až 40% zľavy!</h3>
+
+            <a href="#arrivals" class="btn">Nakupujte</a>
         </div>
 
         <div class="swiper books-slider">
             <div class="swiper-wrapper">
-                <a href="#" class="swiper-slide"><img src="image/book-1.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-2.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-3.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-4.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-5.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-6.png" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="image/book-1.jpg" alt=""style="height: 22rem; "></a>
+                <a href="#" class="swiper-slide"><img src="image/book-2.jpg" alt=""style="height: 22rem; "></a>
+                <a href="#" class="swiper-slide"><img src="image/book-3.jpg" alt=""style="height: 22rem;"></a>
+                <a href="#" class="swiper-slide"><img src="image/book-4.jpg" alt=""style="height: 22rem;"></a>
+                <a href="#" class="swiper-slide"><img src="image/book-5.jpg" alt=""style="height: 22rem;"></a>
+                <a href="#" class="swiper-slide"><img src="image/book-6.jpg" alt=""style="height: 22rem;"></a>
             </div>
             <img src="image/stand.png" class="stand" alt="">
         </div>
@@ -58,32 +58,32 @@ require_once __DIR__ . '/parts/login.php';
     <div class="icons" >
         <i class="fas fa-shipping-fast"></i>
         <div class="content">
-            <h3>free shipping</h3>
-            <p>order over $100</p>
+            <h3>Poštovné zdarma!</h3>
+            <p>pre objednávky nad 100€</p>
         </div>
     </div>
 
     <div class="icons">
         <i class="fas fa-lock"></i>
         <div class="content">
-            <h3>secure payment</h3>
-            <p>100 secure payment</p>
+            <h3>Bezpečná platba!</h3>
+            <p>Dobierka aj online</p>
         </div>
     </div>
 
     <div class="icons">
         <i class="fas fa-redo-alt"></i>
         <div class="content">
-            <h3>easy returns</h3>
-            <p>10 days returns</p>
+            <h3>Jednoduché vrátenie tovaru!</h3>
+            <p>Alebo možná výmena</p>
         </div>
     </div>
 
     <div class="icons">
         <i class="fas fa-headset"></i>
         <div class="content">
-            <h3>24/7 support</h3>
-            <p>call us anytime</p>
+            <h3>Dostupnosť poradcov!</h3>
+            <p>Mobil alebo email</p>
         </div>
     </div>
 
@@ -95,7 +95,7 @@ require_once __DIR__ . '/parts/login.php';
 
 <section class="featured" id="featured">
 
-    <h1 class="heading"> <span>featured books</span> </h1>
+    <h1 class="heading"> <span>Vystavené knihy</span> </h1>
 
     <div class="swiper featured-slider">
 
@@ -108,12 +108,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-1.png" alt="">
+                    <img src="image/book-1.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Zločin a Trest</h3>
+                    <div class="price">13.99€ <span>21.99€</span></div>
+                    <a href="#" class="btn">Pridať do košika</a>
                 </div>
             </div>
 
@@ -124,12 +124,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-2.png" alt="">
+                    <img src="image/book-2.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Atómové návyky</h3>
+                    <div class="price">12.99€ <span>18.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -140,12 +140,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-3.png" alt="">
+                    <img src="image/book-3.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>No longer human</h3>
+                    <div class="price">14.99€ <span>21.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -156,12 +156,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-4.png" alt="">
+                    <img src="image/book-4.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>The Secret History</h3>
+                    <div class="price">15.99€ <span>24.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -172,12 +172,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-5.png" alt="">
+                    <img src="image/book-5.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Tak vravel Zarathursta</h3>
+                    <div class="price">11.99€ <span>17.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -188,12 +188,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-6.png" alt="">
+                    <img src="image/book-6.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Blood Meridian</h3>
+                    <div class="price">13.99€ <span>20.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -204,12 +204,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-7.png" alt="">
+                    <img src="image/book-7.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Psychológia penazí</h3>
+                    <div class="price">13.99€ <span>19.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -220,12 +220,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-8.png" alt="">
+                    <img src="image/book-8.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Alchymista</h3>
+                    <div class="price">11.99€ <span>18.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -236,12 +236,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-9.png" alt="">
+                    <img src="image/book-9.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Vladár</h3>
+                    <div class="price">13.99€ <span>17.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -252,12 +252,12 @@ require_once __DIR__ . '/parts/login.php';
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/book-10.png" alt="">
+                    <img src="image/book-10.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>featured books</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">add to cart</a>
+                    <h3>Stranger</h3>
+                    <div class="price">10.99€ <span>17.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
                 </div>
             </div>
 
@@ -277,9 +277,9 @@ require_once __DIR__ . '/parts/login.php';
 <section class="newsletter">
 
     <form action="">
-        <h3>subscribe for latest updates</h3>
-        <input type="email" name="" placeholder="enter your email" id=" " class="box">
-        <input type="submit" value="subscribe" class="btn">
+        <h3>Odoberajte náš newsletter pre dalšie novinky!</h3>
+        <input type="email" name="" placeholder="Zadajte váš email" id=" " class="box">
+        <input type="submit" value="Odoberajte" class="btn">
     </form>
 
 </section>
@@ -290,7 +290,7 @@ require_once __DIR__ . '/parts/login.php';
 
 <section class="arrivals" id="arrivals">
 
-    <h1 class="heading"> <span>new arrivals</span> </h1>
+    <h1 class="heading"> <span>Novinky</span> </h1>
 
     <div class="swiper arrivals-slider">
 
@@ -298,11 +298,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-1.png" alt="">
+                    <img src="image/book-1.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Zločin a Trest</h3>
+                    <div class="price">13.99€ <span>21.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -315,11 +315,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-2.png" alt="">
+                    <img src="image/book-2.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Atómové návyky</h3>
+                    <div class="price">12.99€ <span>18.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -332,11 +332,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-3.png" alt="">
+                    <img src="image/book-3.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>No longer Human</h3>
+                    <div class="price">14.99€ <span>21.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -349,11 +349,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-4.png" alt="">
+                    <img src="image/book-4.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>The Secret History</h3>
+                    <div class="price">15.99€ <span>24.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -366,11 +366,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-5.png" alt="">
+                    <img src="image/book-5.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Tak vravel Zarathursta</h3>
+                    <div class="price">11.99€ <span>17.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -391,11 +391,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-6.png" alt="">
+                    <img src="image/book-6.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Blood Meridian</h3>
+                    <div class="price">13.99€ <span>20.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -408,11 +408,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-7.png" alt="">
+                    <img src="image/book-7.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Psychológia peňazí</h3>
+                    <div class="price">13.99€ <span>19.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -425,11 +425,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-8.png" alt="">
+                    <img src="image/book-8.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Alchymista</h3>
+                    <div class="price">11.99€<span>19.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -442,11 +442,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-9.png" alt="">
+                    <img src="image/book-9.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Vladár</h3>
+                    <div class="price">13.99€ <span>17.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -459,11 +459,11 @@ require_once __DIR__ . '/parts/login.php';
 
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="image/book-10.png" alt="">
+                    <img src="image/book-10.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
+                    <h3>Stranger</h3>
+                    <div class="price">10.99€ <span>17.99€</span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -487,10 +487,9 @@ require_once __DIR__ . '/parts/login.php';
 <section class="deal">
 
     <div class="content">
-        <h3>deal of the day</h3>
-        <h1>upto 50% off</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis in atque dolore tempora quaerat at fuga dolorum natus velit.</p>
-        <a href="https://freewebsitecode.com/" class="btn">shop now</a>
+        <h3>Ponuka dňa</h3>
+        <h1>až 40% zľavy!</h1>
+        <a href="#arrivals" class="btn">Nakupujte</a>
     </div>
 
     <div class="image">
@@ -505,7 +504,7 @@ require_once __DIR__ . '/parts/login.php';
 
 <section class="reviews" id="reviews">
 
-    <h1 class="heading"> <span>client's reviews</span> </h1>
+    <h1 class="heading"> <span>Recenzie Klientov</span> </h1>
 
     <div class="swiper reviews-slider">
 
@@ -513,21 +512,21 @@ require_once __DIR__ . '/parts/login.php';
 
             <div class="swiper-slide box">
                 <img src="image/pic-1.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Samuel Baťo</h3>
+                <p>Výborné knihy , výborné ceny!</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
 
             <div class="swiper-slide box">
                 <img src="image/pic-2.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Katarína Sklárska</h3>
+                <p>Celá rodina kupuje knihy od Bookly.sk , sme veľmi spokojný.</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -539,20 +538,20 @@ require_once __DIR__ . '/parts/login.php';
 
             <div class="swiper-slide box">
                 <img src="image/pic-3.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Lukáš Horvát</h3>
+                <p>Skvelé ceny!</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
             <div class="swiper-slide box">
                 <img src="image/pic-4.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Elena Gilbert</h3>
+                <p>Odporúčam!</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -564,8 +563,8 @@ require_once __DIR__ . '/parts/login.php';
 
             <div class="swiper-slide box">
                 <img src="image/pic-5.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Samuel Gál</h3>
+                <p>Milujem knihy ale ešte viac milujem php</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -577,14 +576,14 @@ require_once __DIR__ . '/parts/login.php';
 
             <div class="swiper-slide box">
                 <img src="image/pic-6.png" alt="">
-                <h3>john deo</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam at sint, eos ex similique facere hic.</p>
+                <h3>Yen Cho</h3>
+                <p>Odporúčam všetky knihy čo majú na Eshope , naozaj skvelé!</p>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i>
                 </div>
             </div>
 

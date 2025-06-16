@@ -307,8 +307,10 @@ section{
     margin-top: 2rem;
 }
 
-.home .row .books-slider a img{
+.home .row .books-slider a img {
+    width: 15rem;
     height: 25rem;
+    object-fit: cover;
 }
 
 .home .row .books-slider a:hover img{
@@ -432,6 +434,7 @@ section{
     color:var(--light-color);
     text-decoration: line-through;
 }
+
 
 .swiper-button-next,
 .swiper-button-prev{

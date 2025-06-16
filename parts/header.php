@@ -23,10 +23,10 @@
 <header class="header">
   <div class="header-1">
 
-    <a href="index.php" class="logo"> <i class="fas fa-book"></i> bookly </a>
+    <a href="index.php" class="logo"> <i class="fas fa-book"></i> Bookly.sk </a>
 
     <form action="" class="search-form">
-      <input type="search" name="" placeholder="search here..." id="search-box">
+      <input type="search" name="" placeholder="vyhľadajte..." id="search-box">
       <label for="search-box" class="fas fa-search"></label>
     </form>
 
@@ -53,11 +53,11 @@
 
   <div class="header-2">
     <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#featured">featured</a>
-      <a href="#arrivals">arrivals</a>
-      <a href="#reviews">reviews</a>
-      <a href="#blogs">blogs</a>
+      <a href="#home">Domov</a>
+      <a href="#featured">Vystavené</a>
+      <a href="#arrivals">Nové</a>
+      <a href="#reviews">Recenzie</a>
+      <a href="#blogs">Blogy</a>
     </nav>
   </div>
 
