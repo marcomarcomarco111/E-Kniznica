@@ -23,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email']) && isset($_P
         $_SESSION['admin'] = $user['admin'];
 
         if ($user['admin'] == 1) {
-            header("Location: ../admin/dashboard.php");
-            exit;
+
+            header("Location: http://localhost/E-Kniznica/admin/admin.php");
+            exit();
+
         } else {
             header("Location: http://localhost/E-Kniznica/index.php");
             exit();
