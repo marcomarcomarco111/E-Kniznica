@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once '../config.php';
+require_once '../classes/Admin.php';
 
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
     header("Location: ../index.php");
@@ -9,20 +10,16 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
 
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
-
-    $stmt = $conn->prepare("DELETE FROM knihy WHERE idknihy = ?");
-    $stmt->bind_param("i", $id);
-
-    if ($stmt->execute()) {
-
-        header("Location: admin.php");
+    $admin = new Admin($conn);
+    if ($admin->deleteBook($id)) {
+        header("Location: adminmenu.php");
         exit;
     } else {
         echo "Chyba pri mazaní knihy.";
     }
 } else {
-
     header("Location: admin.php");
     exit;
 }
+
 ?>

@@ -1,71 +1,77 @@
 <?php
-require_once '../config.php';
 session_start();
+require_once '../config.php';
+require_once '../classes/Admin.php';
 
-
-
-if (!isset($_GET['id'])) {
-    die('Nebolo zadané ID knihy.');
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != 1) {
+    header("Location: ../index.php");
+    exit;
 }
 
-$id = intval($_GET['id']);
+$admin = new Admin($conn);
+$id = $_GET['id'] ?? null;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nazov = $conn->real_escape_string($_POST['nazov']);
-    $autor = $conn->real_escape_string($_POST['autor']);
-    $jazyk = $conn->real_escape_string($_POST['jazyk']);
-    $strany = intval($_POST['strany']);
-    $popis = $conn->real_escape_string($_POST['popis']);
-    $cena = floatval($_POST['cena']);
-    $obrazok = $conn->real_escape_string($_POST['obrazok']);
-
-    $sql = "UPDATE knihy SET 
-                nazov='$nazov', 
-                autor='$autor', 
-                jazyk='$jazyk', 
-                strany=$strany, 
-                popis='$popis', 
-                cena=$cena, 
-                obrazok='$obrazok' 
-            WHERE idknihy=$id";
-
-    if ($conn->query($sql)) {
-        header('Location: admin.php?msg=Uprava uspesna');
-        exit;
-    } else {
-        echo "Chyba pri uprave: " . $conn->error;
-    }
-}
-
-$sql = "SELECT * FROM knihy WHERE idknihy = $id";
-$result = $conn->query($sql);
-if (!$result || $result->num_rows === 0) {
+if (!$id || !($kniha = $admin->getBookById((int)$id))) {
     die('Kniha nebola nájdená.');
 }
-$kniha = $result->fetch_assoc();
+
+$errors = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $data = array_map('trim', $_POST);
+
+    if (empty($data['nazov'])) $errors[] = "Názov je povinný.";
+    if (empty($data['autor'])) $errors[] = "Autor je povinný.";
+
+    if (!$errors) {
+        if ($admin->updateBook(
+            (int)$id,
+            $data['nazov'],
+            $data['autor'],
+            $data['jazyk'],
+            (int)$data['strany'],
+            (float)$data['cena'],
+            $data['popis'],
+            $data['obrazok']
+        )) {
+            header("Location: admin.php?msg=Uprava uspesna");
+            exit;
+        }
+        $errors[] = "Chyba pri úprave knihy.";
+    }
+}
 ?>
 
-<form method="post">
-    <label>Názov:</label><br>
-    <input type="text" name="nazov" value="<?= htmlspecialchars($kniha['nazov']) ?>" required><br>
+<!DOCTYPE html>
+<html lang="sk">
+<head><meta charset="UTF-8"><title>Upraviť knihu | Admin</title><link rel="stylesheet" href="../css/admin.css"></head>
+<body>
+<div class="form-container">
+    <h1>Upraviť knihu</h1>
 
-    <label>Autor:</label><br>
-    <input type="text" name="autor" value="<?= htmlspecialchars($kniha['autor']) ?>" required><br>
+    <?php if ($errors): ?>
+        <div class="errors"><ul><?php foreach ($errors as $e) echo "<li>" . htmlspecialchars($e) . "</li>"; ?></ul></div>
+    <?php endif; ?>
 
-    <label>Jazyk:</label><br>
-    <input type="text" name="jazyk" value="<?= htmlspecialchars($kniha['jazyk']) ?>" required><br>
+    <form method="post">
+        <?php
+        $fields = ['nazov' => 'Názov', 'autor' => 'Autor', 'jazyk' => 'Jazyk', 'strany' => 'Počet strán', 'cena' => 'Cena (€)', 'popis' => 'Popis', 'obrazok' => 'Obrázok (URL)'];
+        foreach ($fields as $field => $label) {
+            $value = htmlspecialchars($kniha[$field]);
+            if ($field === 'popis') {
+                echo "<label for='$field'>$label:</label><br><textarea id='$field' name='$field' required>$value</textarea><br>";
+            } elseif ($field === 'strany') {
+                echo "<label for='$field'>$label:</label><br><input type='number' id='$field' name='$field' value='$value' required><br>";
+            } elseif ($field === 'cena') {
+                echo "<label for='$field'>$label:</label><br><input type='number' step='0.01' id='$field' name='$field' value='$value' required><br>";
+            } else {
+                echo "<label for='$field'>$label:</label><br><input type='text' id='$field' name='$field' value='$value' required><br>";
+            }
+        }
+        ?>
+        <button type="submit" class="btn-submit">Upraviť knihu</button>
 
-    <label>Počet strán:</label><br>
-    <input type="number" name="strany" value="<?= htmlspecialchars($kniha['strany']) ?>" required><br>
-
-    <label>Popis:</label><br>
-    <textarea name="popis" required><?= htmlspecialchars($kniha['popis']) ?></textarea><br>
-
-    <label>Cena (€):</label><br>
-    <input type="number" step="0.01" name="cena" value="<?= htmlspecialchars($kniha['cena']) ?>" required><br>
-
-    <label>Obrázok (URL):</label><br>
-    <input type="text" name="obrazok" value="<?= htmlspecialchars($kniha['obrazok']) ?>" required><br>
-
-    <button type="submit">Upraviť knihu</button>
-</form>
+    </form>
+</div>
+</body>
+</html>
