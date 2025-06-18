@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data['popis'],
             $data['obrazok']
         )) {
-            header("Location: admin.php?msg=Uprava uspesna");
+            header("Location: adminmenu.php?msg=Uprava uspesna");
             exit;
         }
         $errors[] = "Chyba pri úprave knihy.";

@@ -17,7 +17,7 @@ class User {
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && $heslo === $user['Heslo']) {
+        if ($user && password_verify($heslo, $user['Heslo'])) {
 
             $_SESSION['user_id'] = $user['ID_Pouzivatela'];
             $_SESSION['meno'] = $user['Meno'];
@@ -38,6 +38,7 @@ class User {
         if ($check->fetchColumn() > 0) {
             return "Email už existuje.";
         }
+        $hashedHeslo = password_hash($heslo, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO pouzivatelia (Meno, Priezvisko, email, mobil, Heslo, admin)
             VALUES (:meno, :priezvisko, :email, :mobil, :heslo, 0)";
@@ -46,7 +47,7 @@ class User {
         $stmt->bindParam(':priezvisko', $priezvisko);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':mobil', $mobil);
-        $stmt->bindParam(':heslo', $heslo);
+        $stmt->bindParam(':heslo', $hashedHeslo);
 
         if ($stmt->execute()) {
             return true;
@@ -54,5 +55,12 @@ class User {
             return "Chyba pri registrácii.";
         }
     }
-
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+        header("Location: ../index.php");
+        exit;
+    }
 }

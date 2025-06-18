@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-kniznica Bookly</title>
+    <title>Bookly.sk</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -32,7 +32,7 @@
     <div class="icons">
       <div id="search-btn" class="fas fa-search"></div>
 
-      <a href="#" class="fas fa-heart"></a>
+        <a href="oblubene/oblubene.php" class="fas fa-heart" title="Obľúbené knihy"></a>
       <a href="#" class="fas fa-shopping-cart"></a>
         <div id="login-btn" class="fas fa-user"></div>
 

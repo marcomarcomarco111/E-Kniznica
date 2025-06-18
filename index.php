@@ -256,6 +256,25 @@ require_once __DIR__ . '/parts/login.php';
                 </div>
             </div>
 
+
+            <!-- Testovaci box s knihou na edit a zmazanie-->
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="book.php?id=20" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/book-10.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Test Kniha</h3>
+                    <div class="price">10.99€ <span>17.99€</span></div>
+                    <a href="#" class="btn">Pridať do košíka</a>
+                </div>
+            </div>
+            <!--                                            -->
+
         </div>
 
         <div class="swiper-button-next"></div>
@@ -271,15 +290,18 @@ require_once __DIR__ . '/parts/login.php';
 
 <section class="newsletter">
 
-    <form action="">
+    <form id="newsletter-form">
         <h3>Odoberajte náš newsletter pre dalšie novinky!</h3>
-        <input type="email" name="" placeholder="Zadajte váš email" id=" " class="box">
-        <input type="submit" value="Odoberajte" class="btn">
+        <input type="email" name="email" placeholder="Zadajte váš email" id="email" class="box" required>
+        <input type="submit" value="Odoberať" class="btn" id="submit-btn">
     </form>
 
 </section>
 
+
 <!-- newsletter section ends -->
+
+
 
 <!-- arrivals section starts  -->
 

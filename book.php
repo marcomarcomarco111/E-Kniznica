@@ -26,7 +26,7 @@ $kniha = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($kniha['nazov']) ?> | E-Knižnica</title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/book.css">
 </head>
@@ -43,7 +43,11 @@ $kniha = $result->fetch_assoc();
         <div class="price"><strong>Cena:</strong> <?= htmlspecialchars($kniha['cena']) ?> €</div>
         <div class="book-buttons">
             <button onclick="alert('Kniha bola pridaná do košíka!');">Pridať do košíku</button>
-            <button onclick="alert('Kniha bola pridaná do obľúbených!');">Pridať do obľúbených</button>
+            <form action="oblubene/addoblubene.php" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $kniha['idknihy'] ?>">
+                <button type="submit" onclick="alert('Kniha bola pridaná do obľúbených!');">Pridať do obľúbených</button>
+            </form>
+
         </div>
     </div>
 </div>
