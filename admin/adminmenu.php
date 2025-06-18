@@ -21,11 +21,11 @@ $knihy = $admin->getAllBooks();
 </head>
 <body>
 
-<a href="../registracialogin/logout.php" style="font-size: 0.9em; margin-left: 650px;">
-    <i class="fas fa-sign-out-alt"></i> Odhlásiť sa
-</a>
-
 <div class="admin-container">
+    <a href="../registracialogin/logout.php" class="logout-button">
+        <i class="fas fa-sign-out-alt"></i> Odhlásiť sa
+    </a>
+
     <h1>Správa kníh</h1>
 
     <table>

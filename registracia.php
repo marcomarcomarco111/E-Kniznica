@@ -35,7 +35,7 @@ require_once __DIR__ . '/parts/login.php';
 
     <div class="form-group">
       <label for="password" id="prihlasenie_text">Heslo</label>
-      <input type="password" id="password" name="heslo" class="form-input" required>
+      <input type="password" id="password" name="heslo" class="form-input" minlength="5" required>
     </div>
 
     <button type="submit" class="form-button">Registrovať sa</button>

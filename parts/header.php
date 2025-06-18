@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 
+
 </head>
 <body>
 
@@ -32,8 +33,8 @@
     <div class="icons">
       <div id="search-btn" class="fas fa-search"></div>
 
-        <a href="oblubene/oblubene.php" class="fas fa-heart" title="Obľúbené knihy"></a>
-      <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="oblubene.php" class="fas fa-heart" title="Obľúbené knihy"></a>
+      <a href="kosik.php" class="fas fa-shopping-cart"></a>
         <div id="login-btn" class="fas fa-user"></div>
 
         <?php if (isset($_SESSION['meno'])): ?>
@@ -54,9 +55,9 @@
     <nav class="navbar">
       <a href="#home">Domov</a>
       <a href="#featured">Vystavené</a>
-      <a href="#arrivals">Nové</a>
+      <a href="#arrivals">Novinky</a>
       <a href="#reviews">Recenzie</a>
-      <a href="#blogs">Blogy</a>
+
     </nav>
   </div>
 

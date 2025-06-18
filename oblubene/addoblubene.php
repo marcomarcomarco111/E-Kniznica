@@ -4,7 +4,11 @@ require_once '../classes/Database.php';
 require_once '../classes/Oblubene.php';
 
 if (!isset($_SESSION['user_id'])) {
-    die("Nie ste prihlásený.");
+    echo "<script>
+        alert('Nie ste prihlásený.');
+        window.location.href = '../index.php';
+    </script>";
+    exit;
 }
 
 if (!isset($_POST['id'])) {

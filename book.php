@@ -1,9 +1,8 @@
 <?php
+global $conn;
 require_once 'config.php';
 require_once __DIR__ . '/parts/header.php';
 require_once __DIR__ . '/parts/login.php';
-
-
 
 if (!isset($_GET['id'])) {
     die("Neni id knihy");
@@ -42,7 +41,11 @@ $kniha = $result->fetch_assoc();
         <p><strong>Popis:</strong><br><?= nl2br(htmlspecialchars($kniha['popis'])) ?></p>
         <div class="price"><strong>Cena:</strong> <?= htmlspecialchars($kniha['cena']) ?> €</div>
         <div class="book-buttons">
-            <button onclick="alert('Kniha bola pridaná do košíka!');">Pridať do košíku</button>
+            <form action="kosik/addkosik.php" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $kniha['idknihy'] ?>">
+                <button type="submit" onclick="alert('Kniha bola pridaná do košíka!');">Pridať do košíka</button>
+            </form>
+
             <form action="oblubene/addoblubene.php" method="post" style="display:inline;">
                 <input type="hidden" name="id" value="<?= $kniha['idknihy'] ?>">
                 <button type="submit" onclick="alert('Kniha bola pridaná do obľúbených!');">Pridať do obľúbených</button>
