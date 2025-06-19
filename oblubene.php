@@ -48,6 +48,6 @@ $mojeOblubene = $oblubene->ziskajOblubene($userId);
         </ul>
     <?php endif; ?>
 </div>
-<?php require_once 'parts/footer.html';?>
+<?php include_once 'parts/footer.html';?>
 
 </body>

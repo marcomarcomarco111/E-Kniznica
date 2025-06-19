@@ -18,10 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $vysledok = $user->register($meno, $priezvisko, $email, $mobil, $heslo);
 
     if ($vysledok === true) {
-        header("Location: ../index.php");
+        header("Location: ../index.php?registered=1");
         exit;
     } else {
-        echo "Chyba: " . $vysledok;
+        echo "<script>
+        alert('Tento email už existuje');
+        window.location.href = '../registracia.php';
+    </script>";
+        exit;
     }
 } else {
     die("Neplatný prístup.");

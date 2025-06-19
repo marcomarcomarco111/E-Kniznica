@@ -58,6 +58,6 @@ $knihy = $kosik->ziskajKosik($userId);
 
 </div>
 
-<?php require_once 'parts/footer.html';?>
+<?php include_once 'parts/footer.html';?>
 </body>
 </html>

@@ -2,14 +2,16 @@
 require_once 'config.php';
 require_once __DIR__ . '/parts/header.php';
 require_once __DIR__ . '/parts/login.php';
-?>
+ if (isset($_GET['registered']) && $_GET['registered'] == 1): ?>
+    <script>alert("Registrácia prebehla úspešne!");</script>
+ <?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <body>
 
 <!-- home section starts  -->
-
 <section class="home" id="home">
 
     <div class="row">

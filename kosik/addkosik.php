@@ -6,7 +6,11 @@ $userId = $_SESSION['user_id'] ?? null;
 $knihaId = $_POST['id'] ?? null;
 
 if (!$userId || !$knihaId) {
-    die("Chyba – používateľ nie je prihlásený alebo chýba ID knihy.");
+    echo "<script>
+        alert('Niesi prihlásený.');
+        window.location.href = '../index.php';
+    </script>";
+    exit;
 }
 
 $db = new Database();
