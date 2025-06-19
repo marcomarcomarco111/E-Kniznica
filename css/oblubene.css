@@ -1,0 +1,55 @@
+.oblubene-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    padding-bottom: 500px;
+    color: #333;
+
+}
+
+.oblubene-page h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 4em;
+}
+
+.oblubene-page ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.oblubene-page li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.oblubene-page li:hover {
+    background-color: #f0f0f0;
+}
+
+.oblubene-page li a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.2s ease;
+}
+
+.oblubene-page li a:hover {
+    color: #c0392b;
+}
+.oblubene-page p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.7em;
+}

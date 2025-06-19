@@ -1,0 +1,105 @@
+.kosik-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-bottom: 300px;
+}
+
+.kosik-page h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 4em;
+}
+
+.kosik-page ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.kosik-page li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.kosik-page li:hover {
+    background-color: #f0f0f0;
+}
+
+.kosik-page li a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.2s ease;
+}
+
+.kosik-page li a:hover {
+    color: #c0392b;
+}
+
+.kosik-page p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.7em;
+}
+
+.kosik-page form {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.kosik-page input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.kosik-page button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+.kosik-page button:hover {
+    background-color: #218838;
+}
+.kosik-page label{
+    font-size: 1.5em;
+}
+.kosik-form-box textarea {
+    width: 20%;
+    height: 50px;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.kosik-form-box textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+    outline: none;
+}

@@ -20,6 +20,6 @@ $pdo = $db->connect();
 $oblubene = new Oblubene($pdo);
 $oblubene->odstran($userId, $knihaId);
 
-header("Location: ../oblubene/oblubene.php");
+header("Location: ../oblubene.php");
 exit;
 ?>

@@ -146,3 +146,19 @@ textarea {
     margin-bottom: 1rem;
     border-radius: 8px;
 }
+.logout-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    ;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
